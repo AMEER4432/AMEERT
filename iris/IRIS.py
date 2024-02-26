@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -160,4 +161,12 @@ model=LogisticRegression()
 model.fit(x_train,y_train)
 y_pred=model.predict(x_test)
 accuracy_score(y_pred,y_test)*100
-
+st.title('iris prediction model')
+st.write('---------------------------------------------------')
+sepal_l=st.number_input(label='enter the sepal length')
+sepal_w=st.number_input(label='enter the sepasl width')
+petal_l=st.number_input(label='enter the petal length')
+petal_w=st.number_input(label='enter the petal width')
+pred=model.predict([[sepal_l,sepal_w,petal_l,petal_w]])
+if st.button('predict result'):
+     st.success(f'{pred}')
