@@ -153,7 +153,7 @@ dict1={'sepal_length': '5.1', 'sepal_width': '3.5', 'petal_length': '1.4', 'peta
 {'sepal_length': '6.5', 'sepal_width': '3', 'petal_length': '5.2', 'petal_width': '2', 'species': 'Iris-virginica'}
 {'sepal_length': '6.2', 'sepal_width': '3.4', 'petal_length': '5.4', 'petal_width': '2.3', 'species': 'Iris-virginica'}
 {'sepal_length': '5.9', 'sepal_width': '3', 'petal_length': '5.1', 'petal_width': '1.8', 'species': 'Iris-virginica'}
-df=pd.Datframes(dict1)
+df=pd.Dataframes(dict1)
 x=df.iloc[:,0:4].values
 y=df.iloc[:,4].values
 x_train,x_test,y_train,y_test=train_test_split(x,y,random_state=0)
